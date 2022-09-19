@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+class car
+{
+    public:
+    
+    int wheels=4;
+    //int wheels=getnoofwheels;
+    
+    void printWheels()
+    {
+        cout<<wheels;
+    }
+    
+    //int getnoofwheels()
+    //{
+    //    
+    //}
+    
+    
+};
+
+int main()
+{
+    
+    car obj;
+    
+    //cout<<obj.wheels;
+    
+    obj.printWheels();
+    
+    return 0;
+}

@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+class car
+{
+    public:
+    
+    string name;
+    int wheels;
+    
+    void printname();
+    void printWheels()
+    {
+        cout<<wheels<<endl;
+        
+    }
+};
+
+void car::printname()
+{
+    cout<<name<<endl;
+}
+
+
+int main()
+{
+    
+    car obj;
+    
+    //cout<<obj.wheels;
+    
+    obj.wheels=10;
+    obj.name="HondaCity";
+    
+    obj.printWheels();
+    obj.printname();
+    
+    return 0;
+}

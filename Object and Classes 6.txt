@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+class car
+{
+    public:
+    string name;
+    int wheels;
+    
+    car()
+    {
+        cout<<"inside default constructor"<<endl;
+        name="HondaCity";
+        wheels=4;
+        
+    }
+
+    void printobj()
+    {
+        cout<<"Car Name is : "<<name<<endl;
+        cout<<"No. of wheels are : "<<wheels<<endl;
+        
+    }
+
+};
+
+int main()
+{
+    
+    car obj;
+    obj.printobj();
+    
+    return 0;
+}

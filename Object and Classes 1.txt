@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+class car
+{
+    public:
+    
+    int wheels=4;
+    
+    
+};
+
+int main()
+{
+    
+    car obj;
+    
+    cout<<obj.wheels;
+    
+    return 0;
+}

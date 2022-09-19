@@ -1,0 +1,71 @@
+#include <iostream>
+using namespace std;
+
+class car
+{
+    public:
+    string name;
+    int wheels;
+    
+    car(string st,int w);
+    car(string st);
+
+    void printobj()
+    {
+        cout<<"Car Name is : "<<name<<endl;
+        cout<<"No. of wheels are : "<<wheels<<endl;
+        
+    }
+
+    // It is necessary to pass object as reference and not by value 
+       because if you pass it by value its copy is constructed using
+       the copy constructor.This means the copy constructor would 
+       call itself to make copy.This process will go on until the 
+       compiler runs out of memory.
+    /* 
+    car (car a)
+    {
+        cout<<"inside copy constructor"<<endl;
+        name=a.name;
+        wheels=a.wheels;  
+    }
+    */
+
+    car (car &a)
+    {
+        cout<<"inside copy constructor"<<endl;
+        name=a.name;
+        wheels=a.wheels;  
+    }
+
+};
+
+car::car(string st,int w)
+{
+    cout<<"inside parameterized constructor"<<endl;
+    name=st;
+    wheels=w;
+}
+car::car(string st)
+{
+    cout<<"inside parameterized constructor"<<endl;
+    name=st;
+    wheels=10;
+}
+
+int main()
+{
+    
+    car obj1("Honda_City",5);
+    obj1.printobj();
+    cout<<endl;
+    
+    car obj2(obj1);
+    obj2.printobj();
+    cout<<endl;
+    
+    car obj3=obj1;
+    obj3.printobj();
+    
+    return 0;
+}

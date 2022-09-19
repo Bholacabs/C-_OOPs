@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+class car
+{
+    public:
+    string name;
+    int wheels;
+    
+    car(string st,int w)
+    {
+        cout<<"inside parameterized constructor"<<endl;
+        name=st;
+        wheels=w;
+        
+    }
+
+    void printobj()
+    {
+        cout<<"Car Name is : "<<name<<endl;
+        cout<<"No. of wheels are : "<<wheels<<endl;
+        
+    }
+
+};
+
+int main()
+{
+    
+    car obj("Honda_City",5);
+    obj.printobj();
+    
+    return 0;
+}
